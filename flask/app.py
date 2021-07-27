@@ -13,7 +13,7 @@ def parse():
     text=parser.parseText(url)
     print(f"\nprinting text for [{url}]") 
     print(text)
-    return render_template("calculated.html", url=url)
+    return render_template("calculated.html", text=text)
 
 
 
