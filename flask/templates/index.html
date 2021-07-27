@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block heading %}
+    enter url 
+{% endblock %}
+
+{% block body %}
+    <form action="{{ url_for('parse')}}" method="post">
+        <input type ="text" name="url" placeholder="enter your url" required>
+        <button>submit</button>
+{% endblock %}
+
+
