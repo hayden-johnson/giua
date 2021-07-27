@@ -2,7 +2,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-def parseText(self, url):
+def parseText(url):
     headers = {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET',
