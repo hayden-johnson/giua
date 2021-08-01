@@ -143,12 +143,16 @@ class Options {
     } 
 
     // Save interets in an array
-    let selInterests = [];
     let checkboxes = document.getElementsByName("interestCheckbox");  
     for (var checkbox of checkboxes) {  
       if (checkbox.checked) {
         this.interests.push(checkbox.id);  
       }
+    }
+
+    if (this.languageLevel === "" || this.interests.length === 0) {
+      alert("Please select your language level and interest(s)");
+      return;
     }
 
     // Save in Chrome storage sync

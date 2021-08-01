@@ -1,6 +1,6 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
+  "name": "Guia",
+  "description": "Language learning personalized. Engage with real-world examples. Explore culture. Enter at the appropriate difficulty.",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
