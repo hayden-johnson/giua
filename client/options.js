@@ -95,7 +95,6 @@ class Options {
       levelDiv.appendChild(levelBtn);
       levelDiv.appendChild(levelLabel)
       this._levelsGroup.appendChild(levelDiv);
-      console.log(levelDiv)
     }
 
   }
@@ -125,8 +124,6 @@ class Options {
       interestDiv.appendChild(interestBtn);
       interestDiv.appendChild(interestLabel)
       this._interestsGroup.appendChild(interestDiv);
-            console.log(interestDiv)
-
     }
 
   }
@@ -160,7 +157,7 @@ class Options {
       interests: this.interests
     }, function() {
       // Update status to let user know options were saved.
-      let status = document.getElementById("status");
+      let status = document.querySelector("#status");
       status.classList.remove("hidden");
     });
 
