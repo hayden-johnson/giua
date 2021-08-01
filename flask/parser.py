@@ -16,4 +16,8 @@ def parseText(url):
     soup = BeautifulSoup(req.content, 'html.parser')
     return soup.get_text()
 
+def process(text):
+    pass
 
+def compute_readability(text):
+    pass
