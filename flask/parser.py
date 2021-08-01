@@ -1,6 +1,7 @@
 
 from bs4 import BeautifulSoup
 import requests
+import re
 
 def parseText(url):
     headers = {
@@ -14,10 +15,18 @@ def parseText(url):
     # url = "https://medium.com/@randylaosat/a-beginners-guide-to-machine-learning-dfadc19f6caf"
     req = requests.get(url, headers)
     soup = BeautifulSoup(req.content, 'html.parser')
-    return soup.get_text()
+    return soup.get_text(separator=" ")
+    # return " ".join(soup.string)
+
 
 def process(text):
-    pass
+    # remove \n
+    text = text.replace('\n',' ')
+    text = text.replace('\t',' ',)
+    text = text.replace('\s\s\s',' ')
+    text = ' '.join(text.split())
+    # text = text.replace('\u',' ')
+    return text
 
 def compute_readability(text):
     pass

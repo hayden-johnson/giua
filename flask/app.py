@@ -31,11 +31,11 @@ def parse():
 
     url = data['url']
     raw_text = parser.parseText(url)
-    # processed_text = parser.process(raw_text)
+    processed_text = parser.process(raw_text)
     # readabilty_metrics = parser.compute_readabilty(processed_text)
 
     resp = {
-        'text': parser.parseText(url)
+        'text': processed_text
     }
     return jsonify(resp)
 
