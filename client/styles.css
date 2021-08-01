@@ -1,0 +1,172 @@
+* {
+  font-family: 'Jost', sans-serif;
+  font-size: small;
+  font-weight: 400;
+}
+
+body {
+	padding: 1rem;
+	min-width: 25rem;
+	border-radius: 10px;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: xx-large;
+	margin: 0rem;
+}
+
+h2 {
+	font-weight: 600;
+	font-size: medium;
+	margin: 0.25rem 0rem;
+}
+
+h3 {
+	font-weight: 600;
+	font-size: medium;
+	margin: 0rem;
+}
+
+p {
+	margin: 0rem;
+	line-height: 1.25;
+}
+
+body > div {
+	margin: 1rem 0rem;
+}
+
+.hidden {
+	display: none;
+}
+
+#header {
+	display: flex;
+	flex-direction: row;
+	margin: 0rem;
+}
+
+.logo {
+	margin-right: 2rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: xx-large;
+}
+
+.logo img {
+	margin-right: 0.5rem;
+	height: 2rem;
+	width: 2rem;
+	object-fit: contain;
+}
+
+
+#difficulty-container {
+	display: flex;
+	align-items: center;
+}
+
+.green {
+	padding: 0.5rem 1rem;
+	color: #45863A;
+	background-color: #D8F3CC;
+	border-radius: 10px;
+}
+
+.red {
+	padding: 0.5rem 1rem;
+	color: #CE5347;
+	background-color: #F3DACC;
+	border-radius: 10px;
+}
+
+#description-container {
+	margin: 1rem 0rem;
+}
+
+#topics-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.topic-bubble {
+	display: flex;
+	margin: 0.25rem;
+	padding: 0.5rem 1.5rem;
+	background-color: #F5EFE8;
+	border-radius: 15px;
+}
+
+#buttons-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.primary-btn {
+	display: flex;
+	justify-content: center;
+	padding: 0.25rem;
+	background-color: #F6CA65;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 10px;
+}
+
+.primary-btn h2 {
+	text-align: center;
+}
+
+.secondary-btn {
+	display: flex;
+	justify-content: center;
+	padding: 0.25rem;
+	background-color: #FFFFFF;
+	color: #F6CA65;
+	border: 2px #F6CA65 solid;
+	border-radius: 10px;
+}
+
+.half-btn {
+	flex-grow: 1;
+	margin: 0rem 0.25rem;
+}
+
+#options-body {
+	height:  100vh;
+	width: 100vw;
+	margin: -1.5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #F5F5F5;
+}
+
+#options-modal {
+	padding: 1rem;
+	min-width: 30rem;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+
+#options-form {
+	display: flex;
+	flex-direction: column;
+}
+
+form > div {
+	margin: 1rem 0rem;
+}
+
+
+#levels-group {
+	display: flex;
+	flex-direction: column;
+}
+
+#levels-group > div {
+	margin: 0.25rem 0rem;
+}
