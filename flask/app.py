@@ -1,16 +1,16 @@
 from flask import Flask, render_template, request, Response, jsonify, json 
 import parser 
-from flask_cors import CORS
+# from flask_cors import CORS
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/parse": {"origins": "*"}})
+# cors = CORS(app, resources={r"/parse": {"origins": "*"}})
 
 @app.route("/")
 def index():
     return render_template("index.html") 
 
 '''
-curl --data "@message.json" -H "Content-Type: application/json" -X POST http://127.0.0.1:8003/parse
+curl --data "@message_portuguese.json" -H "Content-Type: application/json" -X POST http://127.0.0.1:8004/parse
 '''
 
 @app.route("/parse", methods=["POST"])
@@ -36,10 +36,14 @@ def parse():
     # readabilty_metrics = parser.compute_readabilty(processed_text)
 
     resp = {
-        'text': processed_text
+        'text': processed_text,
+        'difficulty': 'low-intermediate',
+        'isAppropriateDifficulty': 'false',
+        'difficultyFactors': '[factor1, factor2, factor3]',
+        'topics': '[soccer, sports, Brazil, the Olympics, Neymar]'
     }
     return jsonify(resp)
 
 
-if __name__ == "__main__":
-    app.run(debug=True) 
+# if __name__ == "__main__":
+#     app.run(debug=True) 
