@@ -3,7 +3,7 @@ import parser
 from flask_cors import CORS
 
 app = Flask(__name__)
-import CORS app = Flask(__name__) cors = CORS(app, resources={r"/parse": {"origins": "*"}}) 
+cors = CORS(app, resources={r"/parse": {"origins": "*"}})
 
 @app.route("/")
 def index():
