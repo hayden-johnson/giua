@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, Response, jsonify, json 
 import parser 
-# from flask_cors import CORS
+rom flask_cors import CORS
 
 app = Flask(__name__)
-# cors = CORS(app, resources={r"/parse": {"origins": "*"}})
+cors = CORS(app, resources={r"/parse": {"origins": "*"}})
 
 @app.route("/")
 def index():
