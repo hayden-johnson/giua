@@ -1,31 +1,10 @@
 from flask import Flask, render_template, request, Response, jsonify, json 
 import parser 
 import recommend
-from flask_cors import CORS
+# from flask_cors import CORS
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/parse": {"origins": "*"}})
-
-URL_LIST = {
-            "https://www.bbc.com/portuguese/geral-57979486": 
-                            {
-                                "difficulty":"intermediate-b1",
-                                "isAppropriateDifficulty":"true",
-                                "difficultyFactors": 
-                                    ["comparitives", "preterito-perfeito", "preterito-imperfeito", "participio-passafo"],
-                                "topics":
-                                    ["olymipics", "brazil", "skateboarding", "sprorts", "rayssa leal"]
-                                },
-            "https://g1.globo.com/sp/campinas-regiao/noticia/2021/08/02/covid-19-pfizer-anuncia-entrega-de-mais-17-milhoes-de-doses-da-vacina-ate-22-de-agosto.ghtml":
-                            {
-                                "difficulty":"advanced-c1",
-                                "isAppropriateDifficulty":"false",
-                                "difficultyFactors": ["dense-scientific-information"],
-                                "topics":
-                                    ["covid-19", "vaccines", "health", "ministerio-da-saude"]
-                                }   
-        }
-
+# cors = CORS(app, resources={r"/parse": {"origins": "*"}})
 
 @app.route("/")
 def index():
@@ -53,11 +32,11 @@ def parse():
     processed_text = parser.process(raw_text)
     # readabilty_metrics = parser.compute_readabilty(processed_text)
 
-    if url not in URL_LIST:
+    if url not in recommend.URL_LIST:
         print("url not supported")
         return jsonify({})
     else:
-        resp = URL_LIST[url]
+        resp = recommend.URL_LIST[url]
         return jsonify(resp)
 
 
