@@ -30,11 +30,7 @@ URL_LIST = {
                                 "difficultyFactors": ["presente", "perterito-imperfeito", "gerunds"],
                                 "topics":
                                     ["anitta", "pop-music", "geography", "creativity"]                  
-<<<<<<< Updated upstream
                             }
-=======
-                            }   
->>>>>>> Stashed changes
         }
 
 
