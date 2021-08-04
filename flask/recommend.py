@@ -43,5 +43,5 @@ def recommend_media(topics, proficiency):
         sub_dict = URL_LIST[url]
         for topic in sub_dict['match']:
             if topic in topics and URL_LIST[url]['difficulty']==proficiency:
-                return URL_LIST[url]
+                return {"url": url}
     return {}
