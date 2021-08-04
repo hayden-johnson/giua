@@ -4,7 +4,7 @@ import recommend
 from flask_cors import CORS
 
 app = Flask(__name__)
-ors = CORS(app, resources={r"/parse": {"origins": "*"}})
+cors = CORS(app, resources={r"/parse": {"origins": "*"}})
 
 URL_LIST = {
             "https://www.bbc.com/portuguese/geral-57979486": 
@@ -30,13 +30,6 @@ URL_LIST = {
 @app.route("/")
 def index():
     return render_template("index.html") 
-
-'''
-curl --data "@message_portuguese.json" -H "Content-Type: application/json" -X POST http://127.0.0.1:8004/parse
-'''
-'''
-curl --data "@user.json" -H "Content-Type: application/json" -X POST http://127.0.0.1:8004/recommend
-'''
 
 @app.route("/parse", methods=["POST"])
 def parse(): 
@@ -86,8 +79,18 @@ def topics():
         return jsonify({})
 
     topics = data['topics']
+    print(topics)
     proficiency = data['proficiency']
     return recommend.recommend_media(topics, proficiency)
 
 # if __name__ == "__main__":
 #     app.run(debug=True) 
+
+
+
+'''
+curl --data "@message_portuguese.json" -H "Content-Type: application/json" -X POST http://127.0.0.1:8004/parse
+'''
+'''
+curl --data "@user.json" -H "Content-Type: application/json" -X POST http://127.0.0.1:8004/recommend
+'''

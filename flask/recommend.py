@@ -20,7 +20,9 @@ URL_LIST = {
 
 
 def recommend_media(topics, proficiency):
-    for media in URL_LIST:
-        for media_topic in media['topic']:
-            if media_topic in topics and media['difficulty']==proficiency:
-                return media
+    for url in URL_LIST:
+        sub_dict = URL_LIST[url]
+        for topic in sub_dict['topics']:
+            if topic in topics and URL_LIST[url]['difficulty']==proficiency:
+                return URL_LIST[url]
+    return {}
