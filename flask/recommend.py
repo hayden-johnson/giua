@@ -30,7 +30,11 @@ URL_LIST = {
                                 "difficultyFactors": ["presente", "perterito-imperfeito", "gerunds"],
                                 "topics":
                                     ["anitta", "pop-music", "geography", "creativity"]                  
+<<<<<<< Updated upstream
                             }
+=======
+                            }   
+>>>>>>> Stashed changes
         }
 
 
@@ -39,5 +43,5 @@ def recommend_media(topics, proficiency):
         sub_dict = URL_LIST[url]
         for topic in sub_dict['topics']:
             if topic in topics and URL_LIST[url]['difficulty']==proficiency:
-                return URL_LIST[url]
+                return {"url": url}
     return {}

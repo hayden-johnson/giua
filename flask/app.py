@@ -1,10 +1,31 @@
 from flask import Flask, render_template, request, Response, jsonify, json 
 import parser 
 import recommend
-# from flask_cors import CORS
+from flask_cors import CORS
 
 app = Flask(__name__)
-# cors = CORS(app, resources={r"/parse": {"origins": "*"}})
+cors = CORS(app, resources={r"/parse": {"origins": "*"}, r"/topics": {"origins": "*"}})
+
+URL_LIST = {
+            "https://www.bbc.com/portuguese/geral-57979486": 
+                            {
+                                "difficulty":"intermediate-b1",
+                                "isAppropriateDifficulty":"true",
+                                "difficultyFactors": 
+                                    ["comparitives", "preterito-perfeito", "preterito-imperfeito", "participio-passafo"],
+                                "topics":
+                                    ["olymipics", "brazil", "skateboarding", "sprorts", "rayssa leal"]
+                                },
+            "https://g1.globo.com/sp/campinas-regiao/noticia/2021/08/02/covid-19-pfizer-anuncia-entrega-de-mais-17-milhoes-de-doses-da-vacina-ate-22-de-agosto.ghtml":
+                            {
+                                "difficulty":"advanced-c1",
+                                "isAppropriateDifficulty":"false",
+                                "difficultyFactors": ["dense-scientific-information"],
+                                "topics":
+                                    ["covid-19", "vaccines", "health", "ministerio-da-saude"]
+                                }   
+        }
+
 
 @app.route("/")
 def index():
