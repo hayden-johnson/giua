@@ -37,6 +37,8 @@ URL_LIST = {
                             }
         }
 
+DEFAULT_URL = "https://www.bbc.com/portuguese/geral-57979486"
+
 
 def recommend_media(topics, proficiency):
     for url in URL_LIST:
@@ -44,4 +46,4 @@ def recommend_media(topics, proficiency):
         for topic in sub_dict['match']:
             if topic in topics and URL_LIST[url]['difficulty']==proficiency:
                 return {"url": url}
-    return {}
+    return {"url": DEFAULT_URL}
