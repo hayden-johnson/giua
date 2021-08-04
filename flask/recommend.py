@@ -15,7 +15,22 @@ URL_LIST = {
                                 "difficultyFactors": ["dense-scientific-information"],
                                 "topics":
                                     ["covid-19", "vaccines", "health", "ministerio-da-saude"]
-                                }   
+                                },
+            "https://blog.cheftime.com.br/comer/curiosidades-da-culinaria-japonesa/":
+                            {
+                                "difficulty":"upper-intermediate-b2",
+                                "isAppropriateDifficulty":"false",
+                                "difficultyFactors": ["cooking-terms", "range-of-adj", "diminuitive", "subjective-presente"],
+                                "topics": ["cuisine", "recipies", "food", "sushi"], 
+                            },
+            "https://g1.globo.com/pop-arte/musica/noticia/2021/07/22/pabllo-vittar-anitta-iza-gloria-groove-por-que-o-pop-esta-exaltando-as-origens-na-pandemia.ghtml":
+                            {
+                                "difficulty":"pre-intermediate-a2",
+                                "isAppropriateDifficulty":"true",
+                                "difficultyFactors": ["presente", "perterito-imperfeito", "gerunds"],
+                                "topics":
+                                    ["anitta", "pop-music", "geography", "creativity"]                  
+                            }
         }
 
 
