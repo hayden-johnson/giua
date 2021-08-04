@@ -6,8 +6,8 @@ URL_LIST = {
                                 "difficultyFactors": 
                                     ["comparitives", "preterito perfeito", "preterito imperfeito", "participio passado"],
                                 "topics":
-                                    ["Olympics", "Brazil", "skateboarding", "sports", "Rayssa Leal"],
-                                "match": ["sports", "travel"]
+                                    ["Olympics", "Brazil", "Skateboarding", "Sports", "Rayssa Leal"],
+                                "match": ["Sports", "Travel"]
                                 },
             "https://g1.globo.com/sp/campinas-regiao/noticia/2021/08/02/covid-19-pfizer-anuncia-entrega-de-mais-17-milhoes-de-doses-da-vacina-ate-22-de-agosto.ghtml":
                             {
@@ -15,16 +15,16 @@ URL_LIST = {
                                 "isAppropriateDifficulty":"false",
                                 "difficultyFactors": ["dense scientific information"],
                                 "topics":
-                                    ["Covid-19", "vaccines", "health", "ministerio da saude"],
-                                "match": ["science"]
+                                    ["Covid-19", "Vaccines", "Health", "Ministerio da Saude"],
+                                "match": ["Science"]
                                 },
             "https://blog.cheftime.com.br/comer/curiosidades-da-culinaria-japonesa/":
                             {
                                 "difficulty":"upper-intermediate-b2",
                                 "isAppropriateDifficulty":"false",
                                 "difficultyFactors": ["cooking terms", "broad range of adjectives", "diminuitive", "subjective presente"],
-                                "topics": ["cuisine", "recipes", "food", "sushi"], 
-                                "match": ["cooking", "travel"]   
+                                "topics": ["Cuisine", "Recipes", "Food", "Sushi"], 
+                                "match": ["Cooking", "Travel"]   
                             },
             "https://g1.globo.com/pop-arte/musica/noticia/2021/07/22/pabllo-vittar-anitta-iza-gloria-groove-por-que-o-pop-esta-exaltando-as-origens-na-pandemia.ghtml":
                             {
@@ -32,8 +32,8 @@ URL_LIST = {
                                 "isAppropriateDifficulty":"true",
                                 "difficultyFactors": ["presente", "perterito imperfeito", "gerunds"],
                                 "topics":
-                                    ["Anitta", "pop music", "geography", "creativity"],    
-                                "match": ["art", "music"]               
+                                    ["Anitta", "Pop Music", "Geography", "Creativity"],    
+                                "match": ["Art", "Music"]               
                             }
         }
 
