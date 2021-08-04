@@ -4,7 +4,7 @@ import recommend
 from flask_cors import CORS
 
 app = Flask(__name__)
-ors = CORS(app, resources={r"/parse": {"origins": "*"}})
+cors = CORS(app, resources={r"/parse": {"origins": "*"}})
 
 URL_LIST = {
             "https://www.bbc.com/portuguese/geral-57979486": 
