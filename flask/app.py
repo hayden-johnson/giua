@@ -56,7 +56,7 @@ def topics():
     if 'topics' not in data:
         print('topics not found in data')
         return jsonify({})
-
+    print(json.dumps(data))
     topics = data['topics']
     print(topics)
     proficiency = data['proficiency']
@@ -71,5 +71,6 @@ def topics():
 curl --data "@message_portuguese.json" -H "Content-Type: application/json" -X POST http://127.0.0.1:8004/parse
 '''
 '''
-curl --data "@user.json" -H "Content-Type: application/json" -X POST http://127.0.0.1:8004/recommend
+curl --data "@rec.json" -H "Content-Type: application/json" -X POST http://127.0.0.1:5000/topics
+
 '''

@@ -1,7 +1,7 @@
 URL_LIST = {
             "https://www.bbc.com/portuguese/geral-57979486": 
                             {
-                                "difficulty":"intermediate-b1",
+                                "difficulty":"b1-intermediate",
                                 "isAppropriateDifficulty":"true",
                                 "difficultyFactors": 
                                     ["comparitives", "preterito perfeito", "preterito imperfeito", "participio passado"],
@@ -11,7 +11,7 @@ URL_LIST = {
                                 },
             "https://g1.globo.com/sp/campinas-regiao/noticia/2021/08/02/covid-19-pfizer-anuncia-entrega-de-mais-17-milhoes-de-doses-da-vacina-ate-22-de-agosto.ghtml":
                             {
-                                "difficulty":"advanced-c1",
+                                "difficulty":"c1-advanced",
                                 "isAppropriateDifficulty":"false",
                                 "difficultyFactors": ["dense scientific information"],
                                 "topics":
@@ -20,7 +20,7 @@ URL_LIST = {
                                 },
             "https://blog.cheftime.com.br/comer/curiosidades-da-culinaria-japonesa/":
                             {
-                                "difficulty":"upper-intermediate-b2",
+                                "difficulty":"b2-upper-intermediate",
                                 "isAppropriateDifficulty":"false",
                                 "difficultyFactors": ["cooking terms", "broad range of adjectives", "diminuitive", "subjective presente"],
                                 "topics": ["Cuisine", "Recipes", "Food", "Sushi"], 
@@ -28,7 +28,7 @@ URL_LIST = {
                             },
             "https://g1.globo.com/pop-arte/musica/noticia/2021/07/22/pabllo-vittar-anitta-iza-gloria-groove-por-que-o-pop-esta-exaltando-as-origens-na-pandemia.ghtml":
                             {
-                                "difficulty":"pre-intermediate-a2",
+                                "difficulty":"a2-pre-intermediate",
                                 "isAppropriateDifficulty":"true",
                                 "difficultyFactors": ["presente", "perterito imperfeito", "gerunds"],
                                 "topics":
@@ -37,13 +37,15 @@ URL_LIST = {
                             }
         }
 
-DEFAULT_URL = "https://www.bbc.com/portuguese/geral-57979486"
+DEFAULT_URL = "https://g1.globo.com/pop-arte/musica/noticia/2021/07/22/pabllo-vittar-anitta-iza-gloria-groove-por-que-o-pop-esta-exaltando-as-origens-na-pandemia.ghtml"
 
 
 def recommend_media(topics, proficiency):
     for url in URL_LIST:
         sub_dict = URL_LIST[url]
-        for topic in sub_dict['match']:
-            if topic in topics and URL_LIST[url]['difficulty']==proficiency:
+        for topic in sub_dict['topics'] + sub_dict['match']:
+            if topic in topics and URL_LIST[url]['difficulty']<=proficiency:
                 return {"url": url}
-    return {"url": DEFAULT_URL}
+    print('default')
+    # return {"url": DEFAULT_URL}
+    return {"url": ""}
