@@ -58,7 +58,6 @@ def topics():
         return jsonify({})
     print(json.dumps(data))
     topics = data['topics']
-    print(topics)
     proficiency = data['proficiency']
     return recommend.recommend_media(topics, proficiency)
 

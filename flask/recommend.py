@@ -38,14 +38,14 @@ URL_LIST = {
         }
 
 DEFAULT_URL = "https://g1.globo.com/pop-arte/musica/noticia/2021/07/22/pabllo-vittar-anitta-iza-gloria-groove-por-que-o-pop-esta-exaltando-as-origens-na-pandemia.ghtml"
-
+RECOMMENDED = []
 
 def recommend_media(topics, proficiency):
     for url in URL_LIST:
         sub_dict = URL_LIST[url]
         for topic in sub_dict['topics'] + sub_dict['match']:
-            if topic in topics and URL_LIST[url]['difficulty']<=proficiency:
+            if topic in topics and URL_LIST[url]['difficulty']<=proficiency and url not in RECOMMENDED:
+                RECOMMENDED.append(url)
                 return {"url": url}
-    print('default')
-    # return {"url": DEFAULT_URL}
-    return {"url": ""}
+    
+    return {"url": DEFAULT_URL}
