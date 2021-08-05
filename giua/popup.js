@@ -63,17 +63,17 @@ class Popup {
                             return;
                         }
                         
-                        if(response.difficulty === "beginner-a1"){
+                        if(response.difficulty === "a1-beginner"){
                             articleLevel = 1;
-                        } else if (response.difficulty === "pre-intermediate-a2") {
+                        } else if (response.difficulty === "a2-pre-intermediate") {
                             articleLevel = 2;
-                        } else if (response.difficulty === "intermediate-b1") {
+                        } else if (response.difficulty === "b1-intermediate") {
                             articleLevel = 3;
-                        } else if (response.difficulty === "upper-intermediate-b2") {
+                        } else if (response.difficulty === "b2-upper-intermediate") {
                             articleLevel = 4;
-                        } else if (response.difficulty === "advanced-c1") {
+                        } else if (response.difficulty === "c1-advanced") {
                             articleLevel = 5;
-                        } else if (response.difficulty === "mastery-c2") {
+                        } else if (response.difficulty === "c2-mastery") {
                             articleLevel = 6;
                         }
                         
