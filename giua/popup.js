@@ -57,6 +57,11 @@ class Popup {
                         } else if (items.languageLevel.toLowerCase() === "c2") {
                             userLevel = 6;
                         }
+
+                        if (userLevel === 0) {
+                            alert("Please set your language proficiency in the options menu.");
+                            return;
+                        }
                         
                         if(response.difficulty === "beginner-a1"){
                             articleLevel = 1;
