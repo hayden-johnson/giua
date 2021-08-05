@@ -8,6 +8,7 @@ body {
 	padding: 1rem;
 	min-width: 25rem;
 	border-radius: 10px;
+    min-height: 200px;
 }
 
 h1 {
@@ -67,7 +68,6 @@ body > div {
 	height: 2rem;
 	width: 2rem;
 }
-
 
 #difficulty-container {
 	display: flex;

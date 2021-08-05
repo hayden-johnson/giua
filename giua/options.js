@@ -5,6 +5,12 @@ const LEVELS = {
   "B2": "Upper-Intermediate (B2)",
   "C1": "Advanced (C1)",
   "C2": "Mastery (C2)"
+  // "beginner-a1": "Beginner (A1)",
+  // "pre-intermediate-a2: "Pre-Intermediate (A2)",
+  // "intermediate-b1": "Intermediate (B1)",
+  // "upper-intermediate-b2": "Upper-Intermediate (B2)",
+  // "advanced-c1": "Advanced (C1)",
+  // "mastery-c2": "Mastery (C2)"
 }
 const INTERESTS = ["Art", "Cooking", "Movies", "Music", "Sports", "Travel"];
 
@@ -95,6 +101,7 @@ class Options {
       levelDiv.appendChild(levelBtn);
       levelDiv.appendChild(levelLabel)
       this._levelsGroup.appendChild(levelDiv);
+      console.log(levelDiv)
     }
 
   }
@@ -124,6 +131,8 @@ class Options {
       interestDiv.appendChild(interestBtn);
       interestDiv.appendChild(interestLabel)
       this._interestsGroup.appendChild(interestDiv);
+            console.log(interestDiv)
+
     }
 
   }
@@ -149,7 +158,7 @@ class Options {
         this.interests.push(checkbox.id);  
       }
     }
-
+    
     if (this.languageLevel === "" || this.interests.length === 0) {
       alert("Please select your language level and interest(s)");
       return;
@@ -161,7 +170,7 @@ class Options {
       interests: this.interests
     }, function() {
       // Update status to let user know options were saved.
-      let status = document.querySelector("#status");
+      let status = document.getElementById("status");
       status.classList.remove("hidden");
     });
 
