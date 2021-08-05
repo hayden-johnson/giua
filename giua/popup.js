@@ -148,17 +148,17 @@ class Popup {
                       interests: []
                     }, function(items) {
                         if(items.languageLevel.toLowerCase() === "a1") {
-                            items.languageLevel = "beginner-a1";
+                            items.languageLevel = "a1-beginner";
                         } else if (items.languageLevel.toLowerCase() === "a2") {
-                            items.languageLevel = "pre-intermediate-a2";
+                            items.languageLevel = "a2-pre-intermediate";
                         } else if (items.languageLevel.toLowerCase() === "b1") {
-                            items.languageLevel = "intermediate-b1";
+                            items.languageLevel = "b1-intermediate";
                         } else if (items.languageLevel.toLowerCase() === "b2") {
-                            items.languageLevel = "upper-intermediate-b2";
+                            items.languageLevel = "b2-upper-intermediate";
                         } else if (items.languageLevel.toLowerCase() === "c1") {
-                            items.languageLevel = "advanced-c1";
+                            items.languageLevel = "c1-advanced";
                         } else if (items.languageLevel.toLowerCase() === "c2") {
-                            items.languageLevel = "mastery-c2";
+                            items.languageLevel = "c2-mastery";
                         }
                         console.log(items);
 
