@@ -179,6 +179,7 @@ class Popup {
                             console.log(response);
                             let txt = document.getElementById("articleLink");
                             txt.innerHTML = response.url;
+                            txt.href = response.url;
 
                         });
                         return r;
