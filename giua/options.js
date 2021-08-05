@@ -12,7 +12,7 @@ const LEVELS = {
   // "advanced-c1": "Advanced (C1)",
   // "mastery-c2": "Mastery (C2)"
 }
-const INTERESTS = ["Art", "Cooking", "Movies", "Music", "Sports", "Travel"];
+const INTERESTS = ["Art", "Cooking", "Movies", "Music", "Sports", "Science", "Travel"];
 
 class Options {
   constructor() {
