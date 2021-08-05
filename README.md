@@ -8,3 +8,9 @@
 3. Turn on developer mode.
 4. Click `Load unpacked`.
 5. Select the guia folder.
+### Flask API Setup
+1. Make python virtual env (python -m venv venv) 
+2. Activate virtual env (source venv/bin/activate)
+3. Install requirements (pip install -r requirements.txt)
+4. navigate to flask directory (cd flask)
+5. run flask app (flask run) 
