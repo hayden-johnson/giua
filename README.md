@@ -1,5 +1,5 @@
 # guia
-![Guia logo](https://github.com/hayden-johnson/guia/blob/main/guia/images/guia-icon-large.png)
+![Guia logo](https://github.com/hayden-johnson/guia/blob/main/guia/images/GUIA-LOGO.png)
 
 ## Personal Language Learning
 ### Chrome Extension Setup
